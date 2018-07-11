@@ -6,7 +6,7 @@
   <url>https://CRAN.R-project.org/view=MissingData</url>
   <info>
     <p>
-      Missing data are very frequently found in datasets. Base R provides a few options to handle them using computations that involve only observed data (<code>na.rm = TRUE</code> in functions <code>mean</code>, <code>var</code>, ... or <code>use = complete.obs|na.or.complete|pairwise.complete.obs</code> in functions <code>cov</code>, <code>cor</code>, ...). The base package <pkg>stats</pkg> also contains the generic function <code>na.action</code> that extract information of the <code>NA</code> action used to create an object.
+      Missing data are very frequently found in datasets. Base R provides a few options to handle them using computations that involve only observed data (<code>na.rm = TRUE</code> in functions <code>mean</code>, <code>var</code>, ... or <code>use = complete.obs|na.or.complete|pairwise.complete.obs</code> in functions <code>cov</code>, <code>cor</code>, ...). The base package <pkg>stats</pkg> also contains the generic function <code>na.action</code> that extracts information of the <code>NA</code> action used to create an object.
     </p>
     <p>
       These basic options are complemented by many packages on CRAN, we first structure into four main topics. If you think that we missed some important packages in this list, please contact the maintainer.
