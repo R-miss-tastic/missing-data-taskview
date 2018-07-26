@@ -9,11 +9,11 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-The Missing Data task view source is in the file ```ctv-MissingData.ctv``` that
+The Missing Data task view source is in the file ```MissingData.ctv``` that
 can be transformed into an HTML file using the **R** package [ctv](https://cran.r-project.org/web/packages/micEcon/index.html)
 ```{r ctv2html, eval=TRUE}
 library(ctv)
 setwd(paste(getwd(), "source", sep = "/"))
-source_ctv <- read.ctv("ctv-MissingData.ctv")
+source_ctv <- read.ctv("MissingData.ctv")
 ctv2html(source_ctv, css = "../CRAN_web_css")
 ```

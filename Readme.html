@@ -120,15 +120,15 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Missing Data Task View</h1>
 <h4 class="author"><em>Julie Josse, Nicolas Tierney and Nathalie Vialaneix (r-miss-tastic team)</em></h4>
-<h4 class="date"><em>06 juillet, 2018</em></h4>
+<h4 class="date"><em>26 juillet, 2018</em></h4>
 
 </div>
 
 
-<p>The Missing Data task view source is in the file <code>ctv-MissingData.ctv</code> that can be transformed into an HTML file using the <strong>R</strong> package <a href="https://cran.r-project.org/web/packages/micEcon/index.html">ctv</a></p>
+<p>The Missing Data task view source is in the file <code>MissingData.ctv</code> that can be transformed into an HTML file using the <strong>R</strong> package <a href="https://cran.r-project.org/web/packages/micEcon/index.html">ctv</a></p>
 <pre class="r"><code>library(ctv)
 setwd(paste(getwd(), &quot;source&quot;, sep = &quot;/&quot;))
-source_ctv &lt;- read.ctv(&quot;ctv-MissingData.ctv&quot;)
+source_ctv &lt;- read.ctv(&quot;MissingData.ctv&quot;)
 ctv2html(source_ctv, css = &quot;../CRAN_web_css&quot;)</code></pre>
 
 
