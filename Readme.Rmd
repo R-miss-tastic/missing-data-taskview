@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 
 The Missing Data task view source is in the file `MissingData.ctv` that
 can be transformed into an HTML file using the **R** package [ctv](https://CRAN.R-project.org/package=ctv)
+
 ```{r ctv2html, eval=TRUE}
 library(ctv)
 setwd(paste(getwd(), "source", sep = "/"))
