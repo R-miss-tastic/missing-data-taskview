@@ -2,15 +2,20 @@
 title: "Missing Data Task View"
 author: "Julie Josse, Nicolas Tierney and Nathalie Vialaneix (r-miss-tastic team)"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: html_document
+output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
 ```
 
-The Missing Data task view source is in the file ```MissingData.ctv``` that
-can be transformed into an HTML file using the **R** package [ctv](https://cran.r-project.org/web/packages/micEcon/index.html)
+The Missing Data task view source is in the file `MissingData.ctv` that
+can be transformed into an HTML file using the **R** package [ctv](https://CRAN.R-project.org/package=ctv)
 ```{r ctv2html, eval=TRUE}
 library(ctv)
 setwd(paste(getwd(), "source", sep = "/"))
