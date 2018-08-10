@@ -48,13 +48,15 @@
       <li><pkg>MixedDataImpute</pkg> (for mixed datasets) and <pkg>NPBayesImpute</pkg> (for categorical datasets) suggest multiple imputation based on Bayesian nonparametrics methods.</li>
       <li><pkg>hot.deck</pkg> implements hot deck based multiple imputation.</li>
      </ul>
-    <p>In addition, <i>joint multilevel imputation with Bayesian approaches</i> are implemented in <pkg>jomo</pkg> and <pkg>pan</pkg> and <pkg>mitools</pkg> provide a generic approach to handle multiple imputation in combination with any imputation method.</p>
+    <p>In addition, <i>joint multilevel imputation with Bayesian approaches</i> are implemented in <pkg>jomo</pkg>, <pkg>micemd</pkg>and  <pkg>pan</pkg> and <pkg>mitools</pkg> provide a generic approach to handle multiple imputation in combination with any imputation method.</p>
   </info>
   <packagelist>
-    <pkg>ade4</pkg>
+    <pkg>accelmissing</pkg>
+    <pkg>ade4</pkg> 
     <pkg priority="core">Amelia</pkg>
     <pkg>BaylorEdPsych</pkg>
     <pkg>cat</pkg>
+    <pkg>CoImp</pkg>
     <pkg>DMwR</pkg>
     <pkg>forecast</pkg>
     <pkg>ForImp</pkg>
@@ -89,7 +91,7 @@
   <links>
     <view>TimeSeries</view>
     <bioc>impute</bioc>
-    <bioc>spnStats</bioc>
+    <bioc>snpStats</bioc>
     <bioc priority="core">pcaMethods</bioc>
     <a href="https://gking.harvard.edu/amelia">Amelia II: A Program for Missing Data</a>
   </links>
