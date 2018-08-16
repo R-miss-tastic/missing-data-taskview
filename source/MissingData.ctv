@@ -32,6 +32,8 @@
       <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>HotDeckImputation</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>).</li>
       <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>), in <bioc>snpStats</bioc> (imputation for SNP datasets),  <code>simputation</code> that is a general package for imputation by prediction that can be combined with various regression methods.</li>
       <li><i> Based on random forest</i> in <pkg>missForest</pkg></li>
+       <li><i> Based on copula </i> in <pkg>CoImp</pkg></li>
+     
  
       <li><i>Based on PCA/Singular Value Decomposition/matrix completion</i> implemented in the package <pkg>missMDA</pkg> for numerical, categorical and mixed data, but also in <pkg>softImpute</pkg> and <pkg>denoiseR</pkg> for numerical variables and the package <bioc>pcaMethods</bioc> offers some Bayesian implementation. </li>
       
