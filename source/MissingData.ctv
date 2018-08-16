@@ -47,6 +47,7 @@
        <li><pkg>missMDA</pkg> implements multiple imputation based on SVD methods.</li>
       <li><pkg>MixedDataImpute</pkg> (for mixed datasets) and <pkg>NPBayesImpute</pkg> (for categorical datasets) suggest multiple imputation based on Bayesian nonparametrics methods.</li>
       <li><pkg>hot.deck</pkg> implements hot deck based multiple imputation.</li>
+       <li><pkg>accelmissing</pkg>multiple imputation with the zero-inflated Poisson lognormal model for  missing count values in accelerometer data.  </li>
      </ul>
     <p>In addition, <i>joint multilevel imputation with Bayesian approaches</i> are implemented in <pkg>jomo</pkg>, <pkg>micemd</pkg>and  <pkg>pan</pkg> and <pkg>mitools</pkg> provide a generic approach to handle multiple imputation in combination with any imputation method.</p>
   </info>
