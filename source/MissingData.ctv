@@ -21,13 +21,14 @@
     <p><strong>Imputation using weights</strong></p>
     <ul>
       <li><i>Computation of weights</i> for observed data to account for unobserved data by <i>Inverse Probability Weighting (IPW)</i> is implemented in <pkg>ipw</pkg>.</li>
-      <li></li>
+      <li><i>Weights based on a (spatial) distance</i> are used to impute genetic distances with an <i>Inverse Distance Weighting Interpolation</i> between spatially located samples in the function <code>intgen.idw</code> of the R package <pkg>phylin</pkg>.</li>
     </ul>
     <p><strong>Likelihood based approaches (EM, Bayesian methods and alike)</strong></p>
     <ul>
       <li><i>Full Information Maximum Likelihood</i> (also known as "direct maximum likelihood" or "raw maximum likelihood") is available in <pkg>lavaan</pkg>, for handling missing data in structural equation modeling.</li>
-      <li><i>Methods based on the Expectation Maximization (EM) algorithm</i> are implemented in <pkg>norm</pkg> (using the function <code>em.norm</code> for multivariate Gaussian data), in <pkg>cat</pkg> (function <code>em.cat</code> for multivariate categorical data), in <pkg>mix</pkg> (function <code>em.mix</code> for multivariate mixed categorical and continuous data). These packages also implement <i>Bayesian approaches</i> (with Imputation and Posterior steps) for the same models (functions <code>da.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>) and can be used to obtain imputed complete datasets or multiple imputations (functions <code>imp.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>), once the model parameters have been estimated.     
-      </li>
+      <li><i>Methods based on the Expectation Maximization (EM) algorithm</i> are implemented in <pkg>norm</pkg> (using the function <code>em.norm</code> for multivariate Gaussian data), in <pkg>cat</pkg> (function <code>em.cat</code> for multivariate categorical data), in <pkg>mix</pkg> (function <code>em.mix</code> for multivariate mixed categorical and continuous data). These packages also implement <i>Bayesian approaches</i> (with Imputation and Posterior steps) for the same models (functions <code>da.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>) and can be used to obtain imputed complete datasets or multiple imputations (functions <code>imp.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>), once the model parameters have been estimated.</li>
+      <li><pkg>powerlmm</pkg> implements power calculation for time x treatment effects in the presence of <i>dropouts</i> and missing data in mixed linear models.</li>
+      <li><i>Missing values in preference models</i> are handled with a <i>Composite Link</i> approach that allows for MCAR and MNAR patterns to be taken into account in <pkg>prefmod</pkg>.</li>
     </ul>
     <p><strong>Single imputation</strong></p>
     <ul>
@@ -37,11 +38,9 @@
       <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>), in <bioc>snpStats</bioc> (imputation for SNP datasets),  <code>simputation</code> that is a general package for imputation by prediction that can be combined with various regression methods.</li>
       <li><i> Based on random forest</i> in <pkg>missForest</pkg></li>
        <li><i> Based on copula </i> in <pkg>CoImp</pkg></li>
-     
- 
       <li><i>Based on PCA/Singular Value Decomposition/matrix completion</i> implemented in the package <pkg>missMDA</pkg> for numerical, categorical and mixed data, but also in <pkg>softImpute</pkg> and <pkg>denoiseR</pkg> for numerical variables and the package <bioc>pcaMethods</bioc> offers some Bayesian implementation. </li>
-      
-      <li><i>Imputation for time series</i> is implemented in the package <pkg>imputeTS</pkg>. Other packages, such as <pkg>forecast</pkg>, <pkg>spacetime</pkg>, <pkg>timeSeries</pkg>, <pkg>xts</pkg> or <pkg>zoo</pkg>, are dedicated to time series but also contain some (often basic) methods to handle missing data (see also <view>TimeSeries</view>. <pkg>naniar</pkg> also imputed data below the range for exploratory graphical analysis with the function <code>impute_below</code>.</li>
+      <li><i>Imputation for time series</i> is implemented in the package <pkg>imputeTS</pkg>. Other packages, such as <pkg>forecast</pkg>, <pkg>spacetime</pkg>, <pkg>timeSeries</pkg>, <pkg>xts</pkg> or <pkg>zoo</pkg>, are dedicated to time series but also contain some (often basic) methods to handle missing data (see also <view>TimeSeries</view>). <pkg>naniar</pkg> also imputed data below the range for exploratory graphical analysis with the function <code>impute_below</code>.</li>
+      <li><i>Imputation for spatial data</i> is implemented in the package <pkg>phylin</pkg> using interpolation with spatial distance weights or kriging.</li>
     </ul>
     <p><strong>Multiple imputation</strong></p>
     <p>Some of the abovementionned packages can handle multiple imputations:</p>
@@ -87,6 +86,9 @@
     <pkg>norm</pkg>
     <pkg>NPBayesImpute</pkg>
     <pkg>pan</pkg>
+    <pkg>phylin</pkg>
+    <pkg>powerlmm</pkg>
+    <pkg>prefmod</pkg>
     <pkg>spacetime</pkg>
     <pkg>timeSeries</pkg>
     <pkg priority="core">VIM</pkg>
