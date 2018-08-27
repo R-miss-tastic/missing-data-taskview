@@ -1,6 +1,6 @@
 ---
 title: "Missing Data Task View"
-author: "Julie Josse, Nicolas Tierney and Nathalie Vialaneix (r-miss-tastic team)"
+author: "Julie Josse, Nicholas Tierney and Nathalie Vialaneix (r-miss-tastic team)"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: github_document
 ---
