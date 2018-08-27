@@ -9,7 +9,7 @@
       Missing data are very frequently found in datasets. Base R provides a few options to handle them using computations that involve only observed data (<code>na.rm = TRUE</code> in functions <code>mean</code>, <code>var</code>, ... or <code>use = complete.obs|na.or.complete|pairwise.complete.obs</code> in functions <code>cov</code>, <code>cor</code>, ...). The base package stats also contains the generic function <code>na.action</code> that extracts information of the <code>NA</code> action used to create an object.
     </p>
     <p>
-      These basic options are complemented by many packages on CRAN, which we  structure into four main topics: Exploration and visualization of missing values pattern and mechanism; Likelihood based approaches (EM, Bayesian methods and alike); Simple imputation; and Multiple imputation. If you think that we missed some important packages in this list, please contact the maintainer.
+      These basic options are complemented by many packages on CRAN, which we  structure into four main topics: Exploration and visualization of missing values pattern and mechanism; Imputation using weights; Likelihood based approaches (EM, Bayesian methods and alike); Simple imputation; and Multiple imputation. If you think that we missed some important packages in this list, please contact the maintainer.
     </p>
     <p><strong>Exploration and visualization of missing value patterns and mechanisms</strong></p>
     <ul>
@@ -17,7 +17,11 @@
       <li><i>Graphics that describe distributions and patterns of missing data </i>are implemented in <pkg>VIM</pkg> (which has a Graphical User Interface, <pkg>VIMGUI</pkg>) and <pkg>naniar</pkg> (which abides by <a href="https://tidyverse.org">tidyverse</a> principles).</li>
       <li><pkg>mi</pkg> and <pkg>VIM</pkg> also provides diagnostic plots to evaluate imputation quality.</li>
       <li><i>Tests of the MAR assumption (versus the MCAR assumption)</i> are implemented in the function <code>LittleMCAR</code> from <pkg>BaylorEdPsych</pkg> (Little's test) and from <pkg>MissMech</pkg> (a non parametric test).</li>
+    </ul>
+    <p><strong>Imputation using weights</strong></p>
+    <ul>
       <li><i>Computation of weights</i> for observed data to account for unobserved data by <i>Inverse Probability Weighting (IPW)</i> is implemented in <pkg>ipw</pkg>.</li>
+      <li></li>
     </ul>
     <p><strong>Likelihood based approaches (EM, Bayesian methods and alike)</strong></p>
     <ul>
