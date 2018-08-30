@@ -42,6 +42,10 @@
       <li><i>NIPALS</i> is implemented in the package <pkg>mixOmics</pkg> (for PCA and PLS) and in <pkg>plsRglm</pkg> (for generalized model PLS).</li>
       <li><i>Imputation for time series</i> is implemented in the package <pkg>imputeTS</pkg>. Other packages, such as <pkg>forecast</pkg>, <pkg>spacetime</pkg>, <pkg>timeSeries</pkg>, <pkg>xts</pkg>, <pkg>prophet</pkg> or <pkg>zoo</pkg>, are dedicated to time series but also contain some (often basic) methods to handle missing data (see also <view>TimeSeries</view>). <pkg>naniar</pkg> also imputed data below the range for exploratory graphical analysis with the function <code>impute_below</code>.</li>
       <li><i>Imputation for spatial data</i> is implemented in the package <pkg>phylin</pkg> using interpolation with spatial distance weights or kriging.</li>
+     <li><i>Imputation for  genotype and haplotype</i> is implemented in the package <pkg>alleHap</pkg>  using solely
+deterministic techniques on pedigree databases.</li>
+   
+    
     </ul>
     <p><strong>Multiple imputation</strong></p>
     <p>Some of the abovementionned packages can handle multiple imputations:</p>
@@ -54,12 +58,17 @@
       <li><pkg>MixedDataImpute</pkg> (for mixed datasets) and <pkg>NPBayesImpute</pkg> (for categorical datasets) suggest multiple imputation based on Bayesian nonparametrics methods.</li>
       <li><pkg>hot.deck</pkg> implements hot deck based multiple imputation.</li>
        <li><pkg>accelmissing</pkg>multiple imputation with the zero-inflated Poisson lognormal model for  missing count values in accelerometer data.  </li>
-     </ul>
+   <li><pkg>BaBooN</pkg>Bayesian Bootstrap Predictive Mean Matching for Discrete Data. </li>
+ 
+
+    </ul>
     <p>In addition, <i>joint multilevel imputation with Bayesian approaches</i> are implemented in <pkg>jomo</pkg>, <pkg>micemd</pkg>and  <pkg>pan</pkg> and <pkg>mitools</pkg> provide a generic approach to handle multiple imputation in combination with any imputation method.</p>
   </info>
   <packagelist>
     <pkg>accelmissing</pkg>
     <pkg>ade4</pkg> 
+    <pkg>alleHap</pkg> 
+    <pkg>BaBooN</pkg> 
     <pkg priority="core">Amelia</pkg>
     <pkg>BaylorEdPsych</pkg>
     <pkg>cat</pkg>
