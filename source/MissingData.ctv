@@ -42,6 +42,10 @@
        <li><i> Based on copula </i> in <pkg>CoImp</pkg></li>
       <li><i>Based on PCA/Singular Value Decomposition/matrix completion</i> implemented in the package <pkg>missMDA</pkg> for numerical, categorical and mixed data, but also in <pkg>softImpute</pkg> and <pkg>denoiseR</pkg> for numerical variables. The package <bioc>pcaMethods</bioc> offers some Bayesian implementation.</li>
       <li><i>NIPALS</i> is implemented in the package <pkg>mixOmics</pkg> (for PCA and PLS) and in <pkg>plsRglm</pkg> (for generalized model PLS).</li>
+      <li><i>Collective matrix factorization</i> for imputation using Bayesian matrix completion for groups of variables (binary, quantitative, poisson) is implemented in the package <pkg>CMF</pkg>. Imputation for groups is also avalaible in the <pkg>missMDA</pkg> in imputeMFA</li>
+     
+      
+      
       <li><i>Imputation for time series</i> is implemented in the package <pkg>imputeTS</pkg>. Other packages, such as <pkg>forecast</pkg>, <pkg>spacetime</pkg>, <pkg>timeSeries</pkg>, <pkg>xts</pkg>, <pkg>prophet</pkg> or <pkg>zoo</pkg>, are dedicated to time series but also contain some (often basic) methods to handle missing data (see also <view>TimeSeries</view>). <pkg>naniar</pkg> also imputed data below the range for exploratory graphical analysis with the function <code>impute_below</code>.</li>
       <li><i>Imputation for spatial data</i> is implemented in the package <pkg>phylin</pkg> using interpolation with spatial distance weights or kriging.</li>
      <li><i>Imputation for  genotype and haplotype</i> is implemented in the package <pkg>alleHap</pkg>  using solely
@@ -70,6 +74,7 @@ deterministic techniques on pedigree databases.</li>
     <p><strong>Spectific methods with missing values</strong></p>
      <ul>
       <li><pkg>cdparcoord</pkg> handles missing values in parallel coordinates settings. </li>
+       <li><pkg>cobalt</pkg> in the framework of causal inference, compute the balance of variables from multiple imputed data sets. </li>
    </ul>
   
   
@@ -86,6 +91,8 @@ deterministic techniques on pedigree databases.</li>
      <pkg>CALIBERrfimpute</pkg>
     <pkg>cat</pkg>
     <pkg>cdparcoord</pkg>
+    <pkg>CMF</pkg>
+    <pkg>cobalt</pkg>
     <pkg>CoImp</pkg>
     <pkg>DMwR</pkg>
     <pkg>forecast</pkg>
