@@ -18,10 +18,13 @@
       <li><pkg>mi</pkg> and <pkg>VIM</pkg> also provides diagnostic plots to evaluate imputation quality.</li>
       <li><i>Tests of the MAR assumption (versus the MCAR assumption)</i> are implemented in the function <code>LittleMCAR</code> from <pkg>BaylorEdPsych</pkg> (Little's test) and from <pkg>MissMech</pkg> (a non parametric test).</li>
     </ul>
-    <p><strong>Imputation using weights</strong></p>
+    <p><strong>Weighting methods</strong></p>
     <ul>
       <li><i>Computation of weights</i> for observed data to account for unobserved data by <i>Inverse Probability Weighting (IPW)</i> is implemented in <pkg>ipw</pkg>.</li>
       <li><i>Weights based on a (spatial) distance</i> are used to impute genetic distances with an <i>Inverse Distance Weighting Interpolation</i> between spatially located samples in the function <code>intgen.idw</code> of the R package <pkg>phylin</pkg>.</li>
+      <li><i>Doubly Robust Inverse Probability Weighted Augmented GEE
+Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.</li>
+  
     </ul>
     <p><strong>Likelihood based approaches (EM, Bayesian methods and alike)</strong></p>
     <ul>
@@ -48,6 +51,8 @@
       
       <li><i>Imputation for time series</i> is implemented in the package <pkg>imputeTS</pkg>. Other packages, such as <pkg>forecast</pkg>, <pkg>spacetime</pkg>, <pkg>timeSeries</pkg>, <pkg>xts</pkg>, <pkg>prophet</pkg> or <pkg>zoo</pkg>, are dedicated to time series but also contain some (often basic) methods to handle missing data (see also <view>TimeSeries</view>). <pkg>naniar</pkg> also imputed data below the range for exploratory graphical analysis with the function <code>impute_below</code>.</li>
       <li><i>Imputation for spatial data</i> is implemented in the package <pkg>phylin</pkg> using interpolation with spatial distance weights or kriging.</li>
+      <li><i>Imputation for spatio-temporal data</i> is implemented in the package <pkg>cutoffR</pkg> using different methods as knn and SVD.</li>
+     
      <li><i>Imputation for  genotype and haplotype</i> is implemented in the package <pkg>alleHap</pkg>  using solely
 deterministic techniques on pedigree databases.</li>
    
@@ -94,6 +99,7 @@ deterministic techniques on pedigree databases.</li>
     <pkg>CMF</pkg>
     <pkg>cobalt</pkg>
     <pkg>CoImp</pkg>
+     <pkg>CRTgeeDR</pkg>
     <pkg>DMwR</pkg>
     <pkg>forecast</pkg>
     <pkg>ForImp</pkg>
