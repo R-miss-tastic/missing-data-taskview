@@ -16,7 +16,7 @@
  
       <li><i>Graphics that describe distributions and patterns of missing data </i>are implemented in <pkg>VIM</pkg> (which has a Graphical User Interface, <pkg>VIMGUI</pkg>) and <pkg>naniar</pkg> (which abides by <a href="https://tidyverse.org">tidyverse</a> principles).</li>
       <li><pkg>mi</pkg> and <pkg>VIM</pkg> also provides diagnostic plots to evaluate imputation quality.</li>
-       <li><i>Missing data patterns</i> are identified using the function <code>missing_data.frame</code> from <pkg>mi</pkg>, <code>PlotMiss/code> from <pkg>DescTools.</pkg></li>
+       <li><i>Missing data patterns</i> are identified using the function <code>missing_data.frame</code> from <pkg>mi</pkg>, <code>PlotMiss/code> from <pkg>DescTools</pkg> in package <pkg>dlookr.</pkg></li>
       <li><i>Tests of the MAR assumption (versus the MCAR assumption)</i> are implemented in the function <code>LittleMCAR</code> from <pkg>BaylorEdPsych</pkg> (Little's test) and from <pkg>MissMech</pkg> (a non parametric test).</li>
     </ul>
     <p><strong>Weighting methods</strong></p>
@@ -38,10 +38,11 @@ Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.
     </ul>
     <p><strong>Single imputation</strong></p>
     <ul>
-      <li>The simplest method for missing data imputation is <i>imputation by mean</i> (or median, mode, ...). This approach is available in many packages among which <pkg>ForImp</pkg> and <pkg>Hmisc</pkg> that contain various proposals for imputing the same value for all missing data of a variable.</li>
+      <li>The simplest method for missing data imputation is <i>imputation by mean</i> (or median, mode, ...). This approach is available in many packages among which <pkg>ForImp</pkg> and <pkg>Hmisc</pkg>, <pkg>dlookr<pkg> that contain various proposals for imputing the same value for all missing data of a variable.</li>
       <li><i>k-nearest neighbors</i> is a popular method for missing data imputation that is available in many packages including <pkg>DMwR</pkg>, <bioc>impute</bioc>, <pkg>VIM</pkg> and <pkg>yaImpute</pkg> (with many different methods for kNN imputation, among which a CCA based imputation).</li>
       <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>HotDeckImputation</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>).</li>
-      <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>), in <bioc>snpStats</bioc> (imputation for SNP datasets),  <code>simputation</code> that is a general package for imputation by prediction that can be combined with various regression methods.</li>
+      <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>), in <bioc>snpStats</bioc> (imputation for SNP datasets),  <code>simputation</code> that is a general package for imputation by prediction that can be combined with various regression methods.  
+      <pkg>FastImputation</pkg> imputes assuming a gaussian distribution and can be used to impute a test data.</li>
       <li><i> Based on random forest</i> in <pkg>missForest</pkg></li>
        <li><i> Based on copula </i> in <pkg>CoImp</pkg></li>
       <li><i>Based on PCA/Singular Value Decomposition/matrix completion</i> implemented in the package <pkg>missMDA</pkg> for numerical, categorical and mixed data, but also in <pkg>softImpute</pkg> and <pkg>denoiseR</pkg> for numerical variables. The package <bioc>pcaMethods</bioc> offers some Bayesian implementation.</li>
@@ -50,12 +51,16 @@ Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.
      
       
       
-      <li><i>Imputation for time series</i> is implemented in the package <pkg>imputeTS</pkg>. Other packages, such as <pkg>forecast</pkg>, <pkg>spacetime</pkg>, <pkg>timeSeries</pkg>, <pkg>xts</pkg>, <pkg>prophet</pkg> or <pkg>zoo</pkg>, are dedicated to time series but also contain some (often basic) methods to handle missing data (see also <view>TimeSeries</view>). <pkg>naniar</pkg> also imputed data below the range for exploratory graphical analysis with the function <code>impute_below</code>.</li>
+      <li><i>Imputation for time series</i> is implemented in the package <pkg>imputeTS</pkg>. Other packages, such as <pkg>forecast</pkg>, <pkg>spacetime</pkg>, <pkg>timeSeries</pkg>, <pkg>xts</pkg>, <pkg>prophet</pkg> or <pkg>zoo</pkg>, are dedicated to time series but also contain some (often basic) methods to handle missing data (see also <view>TimeSeries</view>). Imputation of Time Series Based on Dynamic Time Warping is implemented in <pkg>DTWBI</pkg> for univariate time series and in <pkg>DTWUMI</pkg> for multivariate ones. <pkg>naniar</pkg> also imputed data below the range for exploratory graphical analysis with the function <code>impute_below</code>.</li>
+      
+      
       <li><i>Imputation for spatial data</i> is implemented in the package <pkg>phylin</pkg> using interpolation with spatial distance weights or kriging.</li>
       <li><i>Imputation for spatio-temporal data</i> is implemented in the package <pkg>cutoffR</pkg> using different methods as knn and SVD.</li>
-     
+      <li><i>Imputation for graphs/network data</i> is implemented in the package <pkg> dils</pkg> to impute missing edges.</li>
+ 
+   
      <li><i>Imputation for  genotype and haplotype</i> is implemented in the package <pkg>alleHap</pkg>  using solely
-deterministic techniques on pedigree databases.</li>
+deterministic techniques on pedigree databases. Imputing Dropout Events in Single-Cell RNA-Sequencing Data  is implemented in the package <pkg>DrImpute</pkg>.</li>
  <li><i>Imputation for non-parametric regression by wavelets shrikage</i> is implemented in the package <pkg>CVThresh</pkg>  using solely
 maximization of the h-likelihood.</li>
 <li><i>Imputation for diffusion processes</i> is implemented in the package <pkg>DiffusionRimp.pdf</pkg>  by imputing missing sample paths with Brownian bridges.</li>
@@ -87,8 +92,18 @@ maximization of the h-likelihood.</li>
   
     <p><strong>Spectific methods with missing values</strong></p>
      <ul>
-      <li><pkg>cdparcoord</pkg> handles missing values in parallel coordinates settings. </li>
-       <li><pkg>cobalt</pkg> in the framework of causal inference, compute the balance of variables from multiple imputed data sets. </li>
+         <li><pkg>cobalt</pkg> in the framework of causal inference, compute the balance of variables from multiple imputed data sets. </li>
+                <li><pkg>experiment</pkg> handles missing values in experimental design such as Randomized Experiments
+With Missing Covariate and Outcome Data, Matched-Pairs Design with missing outcome. </li>
+          <li><pkg>cdparcoord</pkg> handles missing values in parallel coordinates settings. </li>
+ 
+
+         <li><pkg>eigenmodel</pkg> handles missing values in regression models for symmetric relational data. </li>
+          <li><pkg>FamEvent</pkg>  Multistage Sampling
+of Family Data with Missing Genetic Covariates handled with EM algorithm </li>
+        
+   
+    
    </ul>
   
   
@@ -114,6 +129,14 @@ maximization of the h-likelihood.</li>
     <pkg>dejaVu</pkg>
      <pkg>DescTools</pkg>
       <pkg>DiffusionRimp.pdf</pkg>
+       <pkg>dlookr</pkg>
+        <pkg>DrImpute</pkg>
+         <pkg>DTWBI</pkg>
+          <pkg>DTWUMI</pkg>
+           <pkg>eigenmodel</pkg>
+           <pkg>experiment</pkg>
+            <pkg>FamEvent</pkg>
+           <pkg>FastImputation</pkg>
     <pkg>forecast</pkg>
     <pkg>ForImp</pkg>
     <pkg>Hmisc</pkg>
