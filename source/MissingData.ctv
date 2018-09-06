@@ -39,13 +39,13 @@ Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.
     <p><strong>Single imputation</strong></p>
     <ul>
       <li>The simplest method for missing data imputation is <i>imputation by mean</i> (or median, mode, ...). This approach is available in many packages among which <pkg>ForImp</pkg> and <pkg>Hmisc</pkg>, <pkg>dlookr<pkg> that contain various proposals for imputing the same value for all missing data of a variable.</li>
-      <li><i>k-nearest neighbors</i> is a popular method for missing data imputation that is available in many packages including <pkg>DMwR</pkg>, <bioc>impute</bioc>, <pkg>VIM</pkg> and <pkg>yaImpute</pkg> (with many different methods for kNN imputation, among which a CCA based imputation).</li>
-      <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>HotDeckImputation</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>).</li>
+      <li><i>k-nearest neighbors</i> is a popular method for missing data imputation that is available in many packages including <pkg>DMwR</pkg>, <bioc>impute</bioc>, <pkg>VIM</pkg>, <pkg>GenForImp</pkg> and <pkg>yaImpute</pkg> (with many different methods for kNN imputation, among which a CCA based imputation).</li>
+      <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>HotDeckImputation</pkg>, <pkg>FHDI</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>).</li>
       <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>), in <bioc>snpStats</bioc> (imputation for SNP datasets),  <code>simputation</code> that is a general package for imputation by prediction that can be combined with various regression methods.  
       <pkg>FastImputation</pkg> imputes assuming a gaussian distribution and can be used to impute a test data.</li>
       <li><i> Based on random forest</i> in <pkg>missForest</pkg></li>
        <li><i> Based on copula </i> in <pkg>CoImp</pkg></li>
-      <li><i>Based on PCA/Singular Value Decomposition/matrix completion</i> implemented in the package <pkg>missMDA</pkg> for numerical, categorical and mixed data, but also in <pkg>softImpute</pkg> and <pkg>denoiseR</pkg> for numerical variables. The package <bioc>pcaMethods</bioc> offers some Bayesian implementation.</li>
+      <li><i>Based on PCA/Singular Value Decomposition/matrix completion</i> implemented in the package <pkg>missMDA</pkg> for numerical, categorical and mixed data, but also in <pkg>softImpute</pkg>,  <pkg>filling</pkg> and <pkg>denoiseR</pkg> for numerical variables. The package <bioc>pcaMethods</bioc> offers some Bayesian implementation.</li>
       <li><i>NIPALS</i> is implemented in the package <pkg>mixOmics</pkg> (for PCA and PLS) and in <pkg>plsRglm</pkg> (for generalized model PLS).</li>
       <li><i>Collective matrix factorization</i> for imputation using Bayesian matrix completion for groups of variables (binary, quantitative, poisson) is implemented in the package <pkg>CMF</pkg>. Imputation for groups is also avalaible in the <pkg>missMDA</pkg> in imputeMFA</li>
      
@@ -54,7 +54,7 @@ Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.
       <li><i>Imputation for time series</i> is implemented in the package <pkg>imputeTS</pkg>. Other packages, such as <pkg>forecast</pkg>, <pkg>spacetime</pkg>, <pkg>timeSeries</pkg>, <pkg>xts</pkg>, <pkg>prophet</pkg> or <pkg>zoo</pkg>, are dedicated to time series but also contain some (often basic) methods to handle missing data (see also <view>TimeSeries</view>). Imputation of Time Series Based on Dynamic Time Warping is implemented in <pkg>DTWBI</pkg> for univariate time series and in <pkg>DTWUMI</pkg> for multivariate ones. <pkg>naniar</pkg> also imputed data below the range for exploratory graphical analysis with the function <code>impute_below</code>.</li>
       
       
-      <li><i>Imputation for spatial data</i> is implemented in the package <pkg>phylin</pkg> using interpolation with spatial distance weights or kriging.</li>
+      <li><i>Imputation for spatial data</i> is implemented in the package <pkg>phylin</pkg> using interpolation with spatial distance weights or kriging. The package <pkg>gapfill</pkg> is dedicated to satellite data. </li>
       <li><i>Imputation for spatio-temporal data</i> is implemented in the package <pkg>cutoffR</pkg> using different methods as knn and SVD.</li>
       <li><i>Imputation for graphs/network data</i> is implemented in the package <pkg> dils</pkg> to impute missing edges.</li>
  
@@ -142,11 +142,17 @@ of Family Data with Missing Genetic Covariates handled with EM algorithm </li>
            <pkg>experiment</pkg>
             <pkg>FamEvent</pkg>
            <pkg>FastImputation</pkg>
+            <pkg>fastLink</pkg>
+             <pkg>FHDI</pkg>
+              <pkg>filling</pkg>
     <pkg>forecast</pkg>
     <pkg>ForImp</pkg>
+    pkg>gapfill</pkg>
+     pkg>GenForImp</pkg>
     <pkg>Hmisc</pkg>
     <pkg priority="core">hot.deck</pkg>
     <pkg>HotDeckImputation</pkg>
+   
     <pkg priority="core">imputeTS</pkg>
     <pkg>ipw</pkg>
     <pkg priority="core">jomo</pkg>
