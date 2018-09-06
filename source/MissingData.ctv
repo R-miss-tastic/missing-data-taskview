@@ -51,7 +51,7 @@ Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.
       <li><i>Imputation for spatial data</i> is implemented in the package <pkg>phylin</pkg> using interpolation with spatial distance weights or kriging. The package <pkg>gapfill</pkg> is dedicated to satellite data. </li>
       <li><i>Imputation for spatio-temporal data</i> is implemented in the package <pkg>cutoffR</pkg> using different methods as knn and SVD. Similarly, the package <pkg>reddPrec</pkg> impute missing values in daily precipitation time series accross different locations.</li>
       <li><i>Imputation for graphs/network data</i> is implemented in the package <pkg> dils</pkg> to impute missing edges.</li>
-      <li><i>Imputation in genetics and genomics</i>: imputation for genotype and haplotype is implemented in the package <pkg>alleHap</pkg> using solely deterministic techniques on pedigree databases and imputation of missing genotypes are also implemented in <pkg>QTLRel</pkg> that contains tools for QTL analyses. Imputation for dropout events in single-cell RNA-Sequencing data is implemented in the package <pkg>DrImpute</pkg>.</li>
+      <li><i>Imputation in genetics and genomics</i>: imputation for genotype and haplotype is implemented in the package <pkg>alleHap</pkg> using solely deterministic techniques on pedigree databases and imputation of missing genotypes are also implemented in <pkg>QTLRel</pkg> that contains tools for QTL analyses. Imputation for dropout events (<i>i.e.</i>, under-sampling of mRNA molecules) in single-cell RNA-Sequencing data is implemented in the packages <pkg>DrImpute</pkg> and <pkg>Rmagic</pkg>.</li>
       <li><i>Imputation for non-parametric regression by wavelet shrinkage</i> is implemented in the package <pkg>CVThresh</pkg> using solely maximization of the h-likelihood.</li>
       <li><i>Imputation for diffusion processes</i> is implemented in the package <pkg>DiffusionRimp.pdf</pkg> by imputing missing sample paths with Brownian bridges.</li>
     </ul>
@@ -83,6 +83,7 @@ With Missing Covariate and Outcome Data, Matched-Pairs Design with missing outco
       <li><pkg>eigenmodel</pkg> handles missing values in regression models for symmetric relational data.</li>
       <li><pkg>PSIMEX</pkg> computes inbreeding depression or heritability on pedigree structures affected by missing paternities with a variant of the SIMEX algorithm</li>
       <li><pkg>PST</pkg> provides a framework for analyzing Probabilistic Suffix Trees, including functions for learning and optimizing VLMC (variable length Markov chains) models from sets of individual sequences possibly containing missing values.</li>
+      <li><pkg>RNAseqNet</pkg> uses hot-deck imputation to improve RNA-seq network inference with an auxiliary dataset.</li>
     </ul>
   </info>
   <packagelist>
@@ -152,6 +153,8 @@ With Missing Covariate and Outcome Data, Matched-Pairs Design with missing outco
     <pkg>QTLRel</pkg>
     <pkg>Qtools</pkg>
     <pkg>reddPrec</pkg>
+    <pkg>Rmagic</pkg>
+    <pkg>RNAseqNet</pkg>
     <pkg>spacetime</pkg>
     <pkg>timeSeries</pkg>
     <pkg priority="core">VIM</pkg>
