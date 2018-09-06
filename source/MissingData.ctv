@@ -90,6 +90,11 @@ maximization of the h-likelihood.</li>
     </ul>
     <p>In addition, <i>joint multilevel imputation with Bayesian approaches</i> are implemented in <pkg>jomo</pkg>, <pkg>micemd</pkg>and  <pkg>pan</pkg> and <pkg>mitools</pkg> provide a generic approach to handle multiple imputation in combination with any imputation method.</p>
   
+    <p><strong>Record Linkage</strong></p>
+    <ul>
+         <li><pkg>fastLink</pkg> Fellegi-Sunter probabilistic record linkage. </li>
+       </ul>
+  
     <p><strong>Spectific methods with missing values</strong></p>
      <ul>
          <li><pkg>cobalt</pkg> in the framework of causal inference, compute the balance of variables from multiple imputed data sets. </li>
