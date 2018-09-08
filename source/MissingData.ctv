@@ -17,13 +17,13 @@
       <li><pkg>mi</pkg> and <pkg>VIM</pkg> also provide diagnostic plots to evaluate imputation quality.</li>
       <li><i>Missing data patterns</i> are identified using the functions <code>missing_data.frame</code> from <pkg>mi</pkg>, <code>PlotMiss</code> from <pkg>DescTools</pkg> in package <pkg>dlookr.</pkg></li>
       <li><i>Tests of the MAR assumption (versus the MCAR assumption)</i> are implemented in the function <code>LittleMCAR</code> from <pkg>BaylorEdPsych</pkg> (Little's test) and from <pkg>MissMech</pkg> (a non parametric test).</li>
+      <li><i>Sensitivity analysis</i> of the MAR assumption is implemented in <pkg>samon</pkg> under monotone and non monotone patterns of missing data</li>
     </ul>
     <p><strong>Weighting methods</strong></p>
     <ul>
       <li><i>Computation of weights</i> for observed data to account for unobserved data by <i>Inverse Probability Weighting (IPW)</i> is implemented in <pkg>ipw</pkg>.</li>
-      <li><i>Weights based on a (spatial) distance</i> are used to impute genetic distances with an <i>Inverse Distance Weighting Interpolation</i> between spatially located samples in the function <code>intgen.idw</code> of the R package <pkg>phylin</pkg>.</li>
-      <li><i>Doubly Robust Inverse Probability Weighted Augmented GEE
-Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.</li>
+      <li><i>Doubly Robust Inverse Probability Weighted Augmented GEE Estimator with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.</li>
+      <li><i>Huber weights</i> for mean and covariance estimations are implemented in the package <pkg>rsem</pkg> for structural equation models.</li>
     </ul>
     <p><strong>Likelihood based approaches (EM, Bayesian methods and alike)</strong></p>
     <ul>
@@ -50,7 +50,7 @@ Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.
       <li><i>NIPALS</i> is implemented in the package <pkg>mixOmics</pkg> (for PCA and PLS) and in <pkg>plsRglm</pkg> (for generalized model PLS).</li>
       <li><i>Collective matrix factorization</i> for imputation using Bayesian matrix completion for groups of variables (binary, quantitative, poisson) is implemented in the package <pkg>CMF</pkg>. Imputation for groups is also avalaible in the <pkg>missMDA</pkg> in the function <code>imputeMFA</code></li>
       <li><i>Imputation for time series</i> is implemented in the package <pkg>imputeTS</pkg>. Other packages, such as <pkg>forecast</pkg>, <pkg>spacetime</pkg>, <pkg>timeSeries</pkg>, <pkg>xts</pkg>, <pkg>prophet</pkg> or <pkg>zoo</pkg>, are dedicated to time series but also contain some (often basic) methods to handle missing data (see also <view>TimeSeries</view>). Imputation of Time Series Based on Dynamic Time Warping is implemented in <pkg>DTWBI</pkg> for univariate time series and in <pkg>DTWUMI</pkg> for multivariate ones. <pkg>naniar</pkg> also imputed data below the range for exploratory graphical analysis with the function <code>impute_below</code>.</li>
-      <li><i>Imputation for spatial data</i> is implemented in the package <pkg>phylin</pkg> using interpolation with spatial distance weights or kriging. The package <pkg>gapfill</pkg> is dedicated to satellite data. </li>
+      <li><i>Imputation for spatial data</i> is implemented in the package <pkg>phylin</pkg> using interpolation with spatial distance weights or kriging. The package <pkg>gapfill</pkg> is dedicated to satellite data and geostatistical interpolation of data with irregular spatial support is implemented in <pkg>rtop</pkg></li>
       <li><i>Imputation for spatio-temporal data</i> is implemented in the package <pkg>cutoffR</pkg> using different methods as knn and SVD. Similarly, the package <pkg>reddPrec</pkg> impute missing values in daily precipitation time series accross different locations.</li>
       <li><i>Imputation for graphs/network data</i> is implemented in the package <pkg>dils</pkg> to impute missing edges.</li>
       <li><i>Imputation for compositional data (CODA)</i> is implemented in the package <pkg>robCompositions</pkg> (based on kNN or EM approaches).</li>
@@ -127,7 +127,7 @@ With Missing Covariate and Outcome Data, Matched-Pairs Design with missing outco
     <pkg>GenForImp</pkg>
     <pkg>gsynth</pkg>
     <pkg>Haplin</pkg>
-    <pkg>HardyWeinberg/pkg>
+    <pkg>HardyWeinberg</pkg>
     <pkg>Hmisc</pkg>
     <pkg priority="core">hot.deck</pkg>
     <pkg>HotDeckImputation</pkg>
@@ -166,6 +166,9 @@ With Missing Covariate and Outcome Data, Matched-Pairs Design with missing outco
     <pkg>robCompositions</pkg>
     <pkg>robustrao</pkg>
     <pkg>Rphylopars</pkg>
+    <pkg>rsem</pkg>
+    <pkg>rtop</pkg>
+    <pkg>samon</pkg>
     <pkg>spacetime</pkg>
     <pkg>timeSeries</pkg>
     <pkg priority="core">VIM</pkg>
