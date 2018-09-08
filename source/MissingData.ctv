@@ -30,8 +30,9 @@ Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.
       <li><i>Full Information Maximum Likelihood</i> (also known as "direct maximum likelihood" or "raw maximum likelihood") is available in <pkg>lavaan</pkg>, for handling missing data in structural equation modeling.</li>
       <li><i>Methods based on the Expectation Maximization (EM) algorithm</i> are implemented in <pkg>norm</pkg> (using the function <code>em.norm</code> for multivariate Gaussian data), in <pkg>cat</pkg> (function <code>em.cat</code> for multivariate categorical data), in <pkg>mix</pkg> (function <code>em.mix</code> for multivariate mixed categorical and continuous data). These packages also implement <i>Bayesian approaches</i> (with Imputation and Posterior steps) for the same models (functions <code>da.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>) and can be used to obtain imputed complete datasets or multiple imputations (functions <code>imp.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>), once the model parameters have been estimated.</li>
       <li><i>Missing values in Mixed-Effects models</i> are supported in the package <pkg>PSM</pkg> that uses stochastic differential equation for linear and non-linear model fitting</li>
+      <li><i>Robust covariance estimation</i> is implemented in the package <pkg>GSE</pkg></li>
       <li><i>Epidemiology</i>: <pkg>powerlmm</pkg> implements power calculation for time x treatment effects in the presence of <i>dropouts</i> and missing data in mixed linear models and <pkg>pseval</pkg> evaluates principal surrogates in a single clinical trial in the presence of missing counterfactual surrogate responses.</li>
-      <li><i>In genetics and genomics</i>: <pkg>FamEvent</pkg> implements imputation of missing genotypes with an EM algorithm.</li>
+      <li><i>In genetics and genomics</i>: analyses of Case-Parent Triad and/or Case-Control Data with SNP haplotypes is implemented in the package <pkg>Haplin</pkg> in which missing genotypic data are handled with an EM algorithm. <pkg>FamEvent</pkg> implements imputation of missing genotypes with an EM algorithm.</li>
       <li><i>In philogeny</i>: <pkg>Rphylopars</pkg> can perform ancestral state reconstruction and missing data imputation on the estimated evolutionary mode in philogeny (traits/species) datasets.</li>
       <li><i>Missing values in preference models</i> are handled with a <i>Composite Link</i> approach that allows for MCAR and MNAR patterns to be taken into account in <pkg>prefmod</pkg>.</li>
        <li><i>MNAR values in response variable</i> for<i>logistic regression</i> are handle with EM algorithm in <pkg>brlrmr</pkg>.</li>
@@ -53,7 +54,7 @@ Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.
       <li><i>Imputation for spatio-temporal data</i> is implemented in the package <pkg>cutoffR</pkg> using different methods as knn and SVD. Similarly, the package <pkg>reddPrec</pkg> impute missing values in daily precipitation time series accross different locations.</li>
       <li><i>Imputation for graphs/network data</i> is implemented in the package <pkg>dils</pkg> to impute missing edges.</li>
       <li><i>Imputation for compositional data (CODA)</i> is implemented in the package <pkg>robCompositions</pkg> (based on kNN or EM approaches).</li>
-      <li><i>Imputation in genetics and genomics</i>: imputation for genotype and haplotype is implemented in the package <pkg>alleHap</pkg> using solely deterministic techniques on pedigree databases and imputation of missing genotypes are also implemented in <pkg>QTLRel</pkg> that contains tools for QTL analyses. Imputation for dropout events (<i>i.e.</i>, under-sampling of mRNA molecules) in single-cell RNA-Sequencing data is implemented in the packages <pkg>DrImpute</pkg> and <pkg>Rmagic</pkg>.</li>
+      <li><i>Imputation in genetics and genomics</i>: imputation for genotype and haplotype is implemented in the package <pkg>alleHap</pkg> using solely deterministic techniques on pedigree databases and imputation of missing genotypes are also implemented in <pkg>QTLRel</pkg> that contains tools for QTL analyses. Tools for Hardy-Weinberg equilibrium for bi- and multi-allelic genetic marker data are implemented in the package <pkg>HardyWeinberg</pkg> in which missing genotypes are imputed with a multinomial logit model. Imputation for dropout events (<i>i.e.</i>, under-sampling of mRNA molecules) in single-cell RNA-Sequencing data is implemented in the packages <pkg>DrImpute</pkg> and <pkg>Rmagic</pkg>.</li>
       <li><i>Imputation for non-parametric regression by wavelet shrinkage</i> is implemented in the package <pkg>CVThresh</pkg> using solely maximization of the h-likelihood.</li>
       <li><i>Imputation for diffusion processes</i> is implemented in the package <pkg>DiffusionRimp.pdf</pkg> by imputing missing sample paths with Brownian bridges.</li>
     </ul>
@@ -78,7 +79,7 @@ Estimator</i> <i>with missing outcome</i> is implemented in <pkg>CRTgeeDR</pkg>.
     </ul>
     <p><strong>Spectific methods with missing values</strong></p>
     <ul>
-      <li><pkg>cobalt</pkg> in the framework of causal inference, compute the balance of variables from multiple imputed data sets.</li>
+      <li>In the framework of causal inference, <pkg>cobalt</pkg> computes the balance of variables from multiple imputed data sets. Similarly, causal inference with interactive fixed-effect models is available in the package <pkg>gsynth</pkg> with missing values handled by matrix completion</li>
       <li><pkg>experiment</pkg> handles missing values in experimental design such as Randomized Experiments
 With Missing Covariate and Outcome Data, Matched-Pairs Design with missing outcome.</li>
       <li><pkg>cdparcoord</pkg> handles missing values in parallel coordinates settings.</li>
@@ -124,6 +125,9 @@ With Missing Covariate and Outcome Data, Matched-Pairs Design with missing outco
     <pkg>ForImp</pkg>
     <pkg>gapfill</pkg>
     <pkg>GenForImp</pkg>
+    <pkg>gsynth</pkg>
+    <pkg>Haplin</pkg>
+    <pkg>HardyWeinberg/pkg>
     <pkg>Hmisc</pkg>
     <pkg priority="core">hot.deck</pkg>
     <pkg>HotDeckImputation</pkg>
