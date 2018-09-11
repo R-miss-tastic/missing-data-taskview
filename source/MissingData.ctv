@@ -13,11 +13,13 @@
     </p>
     <p><strong>Exploration and visualization of missing value patterns and mechanisms</strong></p>
     <ul>
-      <li><i>Graphics that describe distributions and patterns of missing data</i> are implemented in <pkg>VIM</pkg> (which has a Graphical User Interface, <pkg>VIMGUI</pkg>) and <pkg>naniar</pkg> (which abides by <a href="https://tidyverse.org">tidyverse</a> principles).</li>
+      <li><i>Manipulation of missing data</i> is implemented in the package <pkg>sjmisc</pkg> that contain several utility functions to manipulate missing data (as well as functions for basic imputations and to merge multiple imputations) and <pkg>sjlabelled</pkg> that can deal with labelled data with multiple declared missing values.</li>
+      <li><i>Graphics that describe distributions and patterns of missing data</i> are implemented in <pkg>VIM</pkg> (which has a Graphical User Interface, <pkg>VIMGUI</pkg>) and <pkg>naniar</pkg> (which abides by <a href="https://tidyverse.org">tidyverse</a> principles), as well as in <pkg>SNPassoc</pkg> in the case of SNP studies (genetics).</li>
       <li><pkg>mi</pkg> and <pkg>VIM</pkg> also provide diagnostic plots to evaluate imputation quality.</li>
       <li><i>Missing data patterns</i> are identified using the functions <code>missing_data.frame</code> from <pkg>mi</pkg>, <code>PlotMiss</code> from <pkg>DescTools</pkg> in package <pkg>dlookr.</pkg></li>
       <li><i>Tests of the MAR assumption (versus the MCAR assumption)</i> are implemented in the function <code>LittleMCAR</code> from <pkg>BaylorEdPsych</pkg> (Little's test) and from <pkg>MissMech</pkg> (a non parametric test).</li>
-      <li><i>Sensitivity analysis</i> of the MAR assumption is implemented in <pkg>samon</pkg> under monotone and non monotone patterns of missing data</li>
+      <li><i>Sensitivity analysis</i> of the MAR assumption is implemented in <pkg>samon</pkg> under monotone and non monotone patterns of missing data.</li>
+      <li><i>Evaluation with simulations</i> can be performed using the package <pkg>simglm</pkg> to simulate based on generalized linear models allowing the specification of missing data or the package <pkg>simsem</pkg> for structural equation modeling.</li>
     </ul>
     <p><strong>Weighting methods</strong></p>
     <ul>
@@ -42,7 +44,7 @@
       <li>The simplest method for missing data imputation is <i>imputation by mean</i> (or median, mode, ...). This approach is available in many packages among which <pkg>ForImp</pkg>, <pkg>Hmisc</pkg>, and <pkg>dlookr</pkg> that contain various proposals for imputing the same value for all missing data of a variable.</li>
       <li><i>k-nearest neighbors</i> is a popular method for missing data imputation that is available in many packages including <pkg>DMwR</pkg>, <bioc>impute</bioc>, <pkg>VIM</pkg>, <pkg>GenForImp</pkg> and <pkg>yaImpute</pkg> (with many different methods for kNN imputation, among which a CCA based imputation).</li>
       <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>HotDeckImputation</pkg>, <pkg>FHDI</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>).</li>
-      <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>), in <bioc>snpStats</bioc> (imputation for SNP datasets),  <code>simputation</code> that is a general package for imputation by prediction that can be combined with various regression methods.  
+      <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>) and in <bioc>snpStats</bioc> (imputation for SNP datasets). In addition, <pkg>simputation</pkg> that is a general package for imputation by prediction that can be combined with various regression methods.  
       <pkg>FastImputation</pkg> imputes assuming a gaussian distribution and can be used to impute a test data.</li>
       <li><i>Based on random forest</i> in <pkg>missForest</pkg>.</li>
        <li><i>Based on copula</i> in <pkg>CoImp</pkg> and in <pkg>sbgcop</pkg> (semi-parametric Bayesian copula imputation).</li>
@@ -63,7 +65,8 @@
     <p>Some of the abovementionned packages can also handle multiple imputations:</p>
     <ul>
       <li><pkg>Amelia</pkg> implements Bootstrap multiple imputation using EM to estimate the parameters, for quantitative data it imputes assuming a Multivariate Gaussian distribution. In addition, AmeliaView is a GUI for <pkg>Amelia</pkg>, available from the <a href="https://gking.harvard.edu/amelia">Amelia web page</a>.</li>
-      <li><pkg>mi</pkg> and <pkg>mice</pkg> implement multiple imputation by Chained Equations.</li>
+      <li><pkg>mi</pkg> and <pkg>mice</pkg> implement multiple imputation by Chained Equations and <pkg>smcfcs</pkg> propose an extension of this approach impute missing covariates from models that are compatible with a user
+specified substantive mode.</li>
       <li><pkg>missMDA</pkg> implements multiple imputation based on SVD methods.</li>
       <li><pkg>MixedDataImpute</pkg> (for mixed datasets) and <pkg>NPBayesImpute</pkg> (for categorical datasets) suggest multiple imputation based on Bayesian nonparametrics methods.</li>
       <li><pkg>hot.deck</pkg> implements hot deck based multiple imputation.</li>
@@ -173,6 +176,13 @@ With Missing Covariate and Outcome Data, Matched-Pairs Design with missing outco
     <pkg>sbart</pkg>
     <pkg>sbgcop</pkg>
     <pkg>scorecardModelUtils</pkg>
+    <pkg>simglm</pkg>
+    <pkg>simputation</pkg>
+    <pkg>simsem</pkg>
+    <pkg>sjlabelled</pkg>
+    <pkg>sjmisc</pkg>
+    <pkg>smcfcs</pkg>
+    <pkg>SNPassoc</pkg>
     <pkg>spacetime</pkg>
     <pkg>timeSeries</pkg>
     <pkg priority="core">VIM</pkg>
