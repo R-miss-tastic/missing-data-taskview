@@ -18,7 +18,7 @@
       <li><pkg>mi</pkg> and <pkg>VIM</pkg> also provide diagnostic plots to evaluate imputation quality.</li>
       <li><i>Missing data patterns</i> are identified using the functions <code>missing_data.frame</code> from <pkg>mi</pkg>, <code>PlotMiss</code> from <pkg>DescTools</pkg> in package <pkg>dlookr.</pkg></li>
       <li><i>Tests of the MAR assumption (versus the MCAR assumption)</i> are implemented in the function <code>LittleMCAR</code> from <pkg>BaylorEdPsych</pkg> (Little's test) and from <pkg>MissMech</pkg> (a non parametric test).</li>
-      <li><i>Sensitivity analysis</i> of the MAR assumption is implemented in <pkg>samon</pkg> under monotone and non monotone patterns of missing data.</li>
+      <li><i>Sensitivity analysis</i> to help diagnose missing data and imputation is implemented in <pkg>TippingPoint</pkg>. In addition, sensitivity analysis of the MAR assumption is implemented in <pkg>samon</pkg> under monotone and non monotone patterns of missing data.</li>
       <li><i>Evaluation with simulations</i> can be performed using the package <pkg>simglm</pkg> to simulate based on generalized linear models allowing the specification of missing data or the package <pkg>simsem</pkg> for structural equation modeling.</li>
     </ul>
     <p><strong>Weighting methods</strong></p>
@@ -30,7 +30,7 @@
     <p><strong>Likelihood based approaches (EM, Bayesian methods and alike)</strong></p>
     <ul>
       <li><i>Full Information Maximum Likelihood</i> (also known as "direct maximum likelihood" or "raw maximum likelihood") is available in <pkg>lavaan</pkg>, for handling missing data in structural equation modeling.</li>
-      <li><i>Methods based on the Expectation Maximization (EM) algorithm</i> are implemented in <pkg>norm</pkg> (using the function <code>em.norm</code> for multivariate Gaussian data), in <pkg>cat</pkg> (function <code>em.cat</code> for multivariate categorical data), in <pkg>mix</pkg> (function <code>em.mix</code> for multivariate mixed categorical and continuous data). These packages also implement <i>Bayesian approaches</i> (with Imputation and Posterior steps) for the same models (functions <code>da.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>) and can be used to obtain imputed complete datasets or multiple imputations (functions <code>imp.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>), once the model parameters have been estimated.</li>
+      <li><i>Methods based on the Expectation Maximization (EM) algorithm</i> are implemented in <pkg>norm</pkg> (using the function <code>em.norm</code> for multivariate Gaussian data), in <pkg>cat</pkg> (function <code>em.cat</code> for multivariate categorical data), in <pkg>mix</pkg> (function <code>em.mix</code> for multivariate mixed categorical and continuous data). These packages also implement <i>Bayesian approaches</i> (with Imputation and Posterior steps) for the same models (functions <code>da.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>) and can be used to obtain imputed complete datasets or multiple imputations (functions <code>imp.</code>XXX for <code>norm</code>, <code>cat</code> and <code>mix</code>), once the model parameters have been estimated. In addition, <pkg>TestDataImputation</pkg> implements EM imputation (and other simpler imputation methods) that are well suited for for dichotomous and polytomous test with item responses.</li>
       <li><i>Missing values in Mixed-Effects models</i> are supported in the package <pkg>PSM</pkg> that uses stochastic differential equation for linear and non-linear model fitting</li>
       <li><i>Missing values in tests</i> based on marginal maximum likelihood estimation and joint maximum likelihood estimation for unidimensional and multidimensional item response models are handled with plausible value imputation in <pkg>TAM</pkg></li>
       <li><i>Robust covariance estimation</i> is implemented in the package <pkg>GSE</pkg></li>
@@ -41,7 +41,7 @@
     </ul>
     <p><strong>Single imputation</strong></p>
     <ul>
-      <li>The simplest method for missing data imputation is <i>imputation by mean</i> (or median, mode, ...). This approach is available in many packages among which <pkg>ForImp</pkg>, <pkg>Hmisc</pkg>, and <pkg>dlookr</pkg> that contain various proposals for imputing the same value for all missing data of a variable.</li>
+      <li>The simplest method for missing data imputation is <i>imputation by mean</i> (or median, mode, ...). This approach is available in many packages among which <pkg>ForImp</pkg>, <pkg>Hmisc</pkg>, and <pkg>dlookr</pkg> that contain various proposals for imputing the same value for all missing data of a variable. This method and other simple imputation method is also available in <pkg>tidyimpute</pkg> that works after the tidyverse approach.</li>
       <li><i>k-nearest neighbors</i> is a popular method for missing data imputation that is available in many packages including <pkg>DMwR</pkg>, <bioc>impute</bioc>, <pkg>VIM</pkg>, <pkg>GenForImp</pkg> and <pkg>yaImpute</pkg> (with many different methods for kNN imputation, among which a CCA based imputation).</li>
       <li><i>hot-deck</i> imputation is implemented in <pkg>hot.deck</pkg>, <pkg>HotDeckImputation</pkg>, <pkg>FHDI</pkg> and <pkg>VIM</pkg> (function <code>hotdeck</code>).</li>
       <li><i>Other regression based imputations</i> are implemented in <pkg>VIM</pkg> (linear regression based imputation in the function <code>regressionImp</code>) and in <bioc>snpStats</bioc> (imputation for SNP datasets). In addition, <pkg>simputation</pkg> that is a general package for imputation by prediction that can be combined with various regression methods.  
@@ -190,7 +190,10 @@ specified substantive mode.</li>
     <pkg>tabplot</pkg>
     <pkg>TAM</pkg>
     <pkg>TAR</pkg>
+    <pkg>TestDataImputation</pkg>
+    <pkg>tidyimpute</pkg>
     <pkg>timeSeries</pkg>
+    <pkg>TippingPoint</pkg>
     <pkg priority="core">VIM</pkg>
     <pkg>VIMGUI</pkg>
     <pkg>xts</pkg>
