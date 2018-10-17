@@ -3,3 +3,5 @@
 .Ruserdata
 .DS_Store
 source/MissingData.html
+.Rproj.user
+.httr-oauth
