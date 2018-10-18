@@ -137,26 +137,36 @@ specified substantive mode.</li>
     <pkg>gsynth</pkg>
     <pkg>Haplin</pkg>
     <pkg>HardyWeinberg</pkg>
+    <pkg>hmi</pkg>
     <pkg>Hmisc</pkg>
     <pkg priority="core">hot.deck</pkg>
     <pkg>HotDeckImputation</pkg>
+    <pkg>icenReg</pkg>
+    <pkg>idealstan</pkg>
+    <pkg>idem</pkg>
     <pkg priority="core">imputeTS</pkg>
     <pkg>ipw</pkg>
+    <pkg>JointAI</pkg>
     <pkg priority="core">jomo</pkg>
     <pkg>lavaan</pkg>
+    <pkg>memisc</pkg>
     <pkg>mi</pkg>
     <pkg priority="core">mice</pkg>
+    <pkg>miceFast</pkg>
     <pkg>missForest</pkg>
     <pkg priority="core">missMDA</pkg>
-    <pkg>randomForest</pkg>
     <pkg>MissMech</pkg>
+    <pkg>mitml</pkg>
     <pkg>mitools</pkg>
     <pkg>mix</pkg>
     <pkg>MixedDataImpute</pkg>
     <pkg>mixOmics</pkg>
+    <pkg>munsellinterpol</pkg>
     <pkg priority="core">naniar</pkg>
+    <pkg>NNLM</pkg>
     <pkg>norm</pkg>
     <pkg>NPBayesImpute</pkg>
+    <pkg>padr</pkg>
     <pkg>pan</pkg>
     <pkg>phylin</pkg>
     <pkg>plsRglm</pkg>
@@ -169,6 +179,7 @@ specified substantive mode.</li>
     <pkg>PST</pkg>
     <pkg>QTLRel</pkg>
     <pkg>Qtools</pkg>
+    <pkg>randomForest</pkg>
     <pkg>reddPrec</pkg>
     <pkg>Rmagic</pkg>
     <pkg>ROptSpace</pkg>
@@ -206,6 +217,7 @@ specified substantive mode.</li>
     <pkg>TippingPoint</pkg>
     <pkg>TreePar</pkg>
     <pkg>TreeSim</pkg>
+    <pkg>tsibble</pkg>
     <pkg>TVsMiss</pkg>
     <pkg>VarSelLCM</pkg>
     <pkg priority="core">VIM</pkg>
