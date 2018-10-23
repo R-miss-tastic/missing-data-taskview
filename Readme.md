@@ -8,8 +8,8 @@ The Missing Data task view source is in the file `MissingData.ctv` that can be t
 
 ``` r
 library(ctv)
-# setwd(paste(getwd(), "source", sep = "/"))
-source_ctv <- read.ctv(here::here("source/MissingData.ctv"))
+setwd(paste(getwd(), "source", sep = "/"))
+source_ctv <- read.ctv("MissingData.ctv")
 ctv2html(source_ctv, css = "../CRAN_web_css")
 ```
 
