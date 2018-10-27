@@ -82,7 +82,7 @@
       <li><i>Spatial data</i>: Imputation for spatial data is implemented in <pkg>phylin</pkg> using interpolation with spatial distance weights or kriging. <pkg>gapfill</pkg> is dedicated to satellite data and geostatistical interpolation of data with irregular spatial support is implemented in <pkg>rtop</pkg></li>
       <li><i>Spatio-temporal data</i>: Imputation for spatio-temporal data is implemented in the package <pkg>cutoffR</pkg> using different methods as knn and SVD. Similarly, <pkg>reddPrec</pkg> imputes missing values in daily precipitation time series accross different locations and <pkg>sptemExp</pkg> imputes missing data air polluant concentrations.</li>
       <li><i>Graphs/networks</i>: Imputation for graphs/networks is implemented in the package <pkg>dils</pkg> to impute missing edges. <pkg>PST</pkg> provides a framework for analyzing Probabilistic Suffix Trees, including functions for learning and optimizing VLMC (variable length Markov chains) models from sets of individual sequences possibly containing missing values.</li>
-      <li><i>Imputation for compositional data (CODA)</i> is implemented in <pkg>robCompositions</pkg> (based on kNN or EM approaches).</li>
+      <li><i>Imputation for compositional data (CODA)</i> is implemented in <pkg>robCompositions</pkg> (based on kNN or EM approaches) and in <pkg>zCompositions</pkg> (various imputation methods for zeros, left-censored and missing data).</li>
       <li><i>Imputation for diffusion processes</i> is implemented in <pkg>DiffusionRimp</pkg> by imputing missing sample paths with Brownian bridges.</li>
       <li><pkg>experiment</pkg> handles missing values in experimental design such as randomized experiments with missing covariate and outcome data, matched-pairs design with missing outcome.</li>
       <li><pkg>cdparcoord</pkg> handles missing values in parallel coordinates settings.</li>
@@ -233,6 +233,7 @@
     <pkg>wrangle</pkg>
     <pkg>xts</pkg>
     <pkg priority="core">yaImpute</pkg>
+    <pkg>zCompositions</pkg>
     <pkg>zoo</pkg>
   </packagelist>
   <links>
