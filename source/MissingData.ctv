@@ -252,5 +252,6 @@
     <bioc priority="core">pcaMethods</bioc>
     <bioc>mixOmics</bioc>
     <a href="https://gking.harvard.edu/amelia">Amelia II: A Program for Missing Data</a>
+    <a href="https://rmisstastic.netlify.com/">A resource website on missing data</a>
   </links>
 </CRANTaskView>
