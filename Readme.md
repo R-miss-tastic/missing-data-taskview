@@ -24,5 +24,5 @@ check_ctv_packages("source/MissingData.ctv")
 #> character(0)
 #> 
 #> $`Packages in <packagelist> but not in repos`
-#> [1] "mixOmics"
+#> character(0)
 ```
