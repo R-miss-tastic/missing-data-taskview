@@ -1,7 +1,7 @@
 Missing Data Task View
 ================
 Julie Josse, Nicholas Tierney and Nathalie Vialaneix (r-miss-tastic team)
-05 août, 2019
+29 octobre, 2019
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 The Missing Data task view source is in the file `MissingData.ctv` that can be transformed into an HTML file using the **R** package [ctv](https://CRAN.R-project.org/package=ctv)
@@ -21,7 +21,7 @@ check_ctv_packages("source/MissingData.ctv")
 #> character(0)
 #> 
 #> $`Packages in <packagelist> but not in <info>`
-#> character(0)
+#> [1] "TreePar" "TreeSim"
 #> 
 #> $`Packages in <packagelist> but not in repos`
 #> character(0)
