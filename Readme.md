@@ -21,7 +21,7 @@ check_ctv_packages("source/MissingData.ctv")
 #> character(0)
 #> 
 #> $`Packages in <packagelist> but not in <info>`
-#> [1] "TreePar" "TreeSim"
+#> character(0)
 #> 
 #> $`Packages in <packagelist> but not in repos`
 #> character(0)
