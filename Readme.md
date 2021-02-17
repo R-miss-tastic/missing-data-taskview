@@ -2,7 +2,7 @@ Missing Data Task View
 ================
 Julie Josse, Nicholas Tierney and Nathalie Vialaneix (r-miss-tastic
 team)
-02 février, 2021
+17 février, 2021
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -30,3 +30,9 @@ check_ctv_packages("source/MissingData.ctv")
 #> $`Packages in <packagelist> but not in repos`
 #> character(0)
 ```
+
+## Note for myself
+
+Next update of the taskview should check for the inclusion of `BMTAR`,
+`cglasso`, `cmfrec`, `eimpute`, `mdgc`, `MGMM`, `mifa`, `miselect`,
+`missMethods`, `RfEmpImp`, `rMIDAS`, `rMisbeta`.

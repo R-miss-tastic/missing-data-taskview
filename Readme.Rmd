@@ -29,3 +29,8 @@ In addition, CTV can be checked before submission to CRAN with:
 check_ctv_packages("source/MissingData.ctv")
 ```
 
+## Note for myself
+
+Next update of the taskview should check for the inclusion of `BMTAR`, 
+`cglasso`, `cmfrec`, `eimpute`, `mdgc`, `MGMM`, `mifa`, `miselect`, 
+`missMethods`, `RfEmpImp`, `rMIDAS`, `rMisbeta`.
