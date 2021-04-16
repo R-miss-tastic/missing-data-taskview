@@ -192,6 +192,7 @@
     <pkg>miceRanger</pkg>
     <pkg>mimi</pkg>
     <pkg>mipred</pkg>
+    <pkg>misaem</pkg>
     <pkg>missForest</pkg>
     <pkg>missingHE</pkg>
     <pkg priority="core">missMDA</pkg>
@@ -203,6 +204,7 @@
     <pkg>miWQS</pkg>
     <pkg>mix</pkg>
     <pkg>mixture</pkg>
+    <pkg>NADIA</pkg>
     <pkg>naivebayes</pkg>
     <pkg priority="core">naniar</pkg>
     <pkg>nipals</pkg>
