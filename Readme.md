@@ -34,4 +34,5 @@ check_ctv_packages("source/MissingData.ctv")
 ## Note for myself
 
 Next update of the taskview should check for the inclusion of `eimpute`,
-`mifa`, `miselect`, `missMethods`, `RfEmpImp`, `rMIDAS`, `rMisbeta`.
+`mifa`, `miselect`, `missMethods`, `RfEmpImp`, `rMIDAS`, `rMisbeta`,
+`PKLM`.
