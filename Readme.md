@@ -2,7 +2,7 @@ Missing Data Task View
 ================
 Julie Josse, Imke Mayer, Nicholas Tierney and Nathalie Vialaneix
 (r-miss-tastic team)
-28 décembre, 2021
+29 décembre, 2021
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
