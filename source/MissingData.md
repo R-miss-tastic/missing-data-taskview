@@ -1,9 +1,9 @@
 ---
 name: MissingData
 topic: Missing Data
-maintainer: Julie Josse, Nicholas Tierney, Nathalie Vialaneix (r-miss-tastic team)
+maintainer: Julie Josse, Imke Mayer, Nicholas Tierney, and Nathalie Vialaneix (r-miss-tastic team)
 email: r-miss-tastic@clementine.wf
-version: 2021-12-16
+version: 2021-12-29
 ---
 
 
@@ -28,10 +28,12 @@ structure into main topics:
 -   [Specific application fields](#applications)
 
 In addition to the present task view, this [reference website on missing
-data](https://rmisstastic.netlify.com/) might also be helpful.
+data](https://rmisstastic.netlify.com/) might also be helpful. Complementary
+information might also be found in `r view("TimeSeries")` and 
+`r view("SpatioTemporal")`.
 
 If you think that we missed some important packages in this list, please
-contact the maintainer.
+contact the maintainers.
 
 [**Exploration of missing data**]{#exploration}
 
@@ -208,7 +210,7 @@ imputations.
     SVD methods.
 -   `r pkg("hot.deck")` implements hot-deck based multiple
     imputation.
--   *Multilevel imputation* : Multilevel multiple imputation is
+-   *Multilevel imputation*: Multilevel multiple imputation is
     implemented in `r pkg("hmi")`,
     `r pkg("jomo", priority = "core")`,
     `r pkg("mice")`, `r pkg("miceadds")`,
@@ -243,7 +245,7 @@ the performances of several imputation algorithms.
 
 [**Specific types of data**]{#data}
 
--   *Longitudinal data / time series and censored data* : Imputation for
+-   *Longitudinal data / time series and censored data*: Imputation for
     time series is implemented in
     `r pkg("imputeTS", priority = "core")` and
     `r pkg("imputePSF")`. Other packages, such as
@@ -275,24 +277,23 @@ the performances of several imputation algorithms.
     time series. On a related topic, `r pkg("imputeFin")`
     handles imputation of missing values in financial time series using
     AR models or random walk.
--   *Spatial data* : Imputation for spatial data is implemented in
+-   *Spatial data*: Imputation for spatial data is implemented in
     `r pkg("phylin")` using interpolation with spatial
     distance weights or kriging. `r pkg("gapfill")` is
     dedicated to satellite data. Geostatistical interpolation of data
     with irregular spatial support is implemented in
     `r pkg("rtop")` and in `r pkg("areal")` that
     estimates values for overlapping but incongruent polygon features.
-    Estimation and prediction for spatio-temporal data with missing
-    values is implemented in `r pkg("StempCens")` with a SAEM
-    approach that approximates EM when the E-step does not have an
-    analytic form.
--   *Spatio-temporal data* : Imputation for spatio-temporal data is
-    implemented in the package `r pkg("cutoffR")` using
-    different methods as knn and SVD and in
-    `r pkg("CircSpaceTime")` for circular data using kriging.
-    Similarly, `r pkg("reddPrec")` imputes missing values in
-    daily precipitation time series accross different locations.
--   *Graphs/networks* : Imputation for graphs/networks is implemented in
+-   *Spatio-temporal data* (see also `r view("SpatioTemporal")`): Imputation 
+    for spatio-temporal data is implemented in the package `r pkg("cutoffR")` 
+    using different methods as knn and SVD and in `r pkg("CircSpaceTime")` for 
+    circular data using kriging. 
+    Similarly, `r pkg("reddPrec")` imputes missing values in daily precipitation
+    time series accross different locations. 
+    Estimation and prediction for spatio-temporal data with missing values is 
+    implemented in `r pkg("StempCens")` with a SAEM approach that approximates 
+    EM when the E-step does not have an analytic form.
+-   *Graphs/networks*: Imputation for graphs/networks is implemented in
     the package `r pkg("dils")` to impute missing edges.
     `r pkg("PST")` provides a framework for analyzing
     Probabilistic Suffix Trees, including functions for learning and
@@ -327,7 +328,7 @@ the performances of several imputation algorithms.
 
 [**Specific application fields**]{#applications}
 
--   *Genetics* : Analyses of Case-Parent Triad and/or Case-Control Data
+-   *Genetics*: Analyses of Case-Parent Triad and/or Case-Control Data
     with SNP haplotypes is implemented in `r pkg("Haplin")`,
     where missing genotypic data are handled with an EM algorithm.
     `r pkg("FamEvent")` and `r bioc("snpStats")`
@@ -345,12 +346,12 @@ the performances of several imputation algorithms.
     `r pkg("PSIMEX")` computes inbreeding depression or
     heritability on pedigree structures affected by missing paternities
     with a variant of the SIMEX algorithm.
--   *Genomics* : Imputation for dropout events ( *i.e.* , under-sampling
+-   *Genomics*: Imputation for dropout events ( *i.e.* , under-sampling
     of mRNA molecules) in single-cell RNA-Sequencing data is implemented
     in `r pkg("DrImpute")` and `r pkg("Rmagic")`.
     `r pkg("RNAseqNet")` uses hot-deck imputation to improve
     RNA-seq network inference with an auxiliary dataset.
--   *Epidemiology* : `r pkg("idem")` implements a procedure
+-   *Epidemiology*: `r pkg("idem")` implements a procedure
     for comparing treatments in clinical trials with missed visits or
     premature withdrawal. `r pkg("InformativeCensoring")`
     implements multiple imputation for informative censoring.
@@ -359,7 +360,7 @@ the performances of several imputation algorithms.
     surrogate responses. `r pkg("sievePH")` implements
     continuous, possibly multivariate, mark-specific hazard ratio with
     missing values in multivariate marks using an IPW approach.
--   *Causal inference* : Causal inference with interactive fixed-effect
+-   *Causal inference*: Causal inference with interactive fixed-effect
     models is available in `r pkg("gsynth")` with missing
     values handled by matrix completion. `r pkg("MatchThem")`
     matches multiply imputed datasets using several matching methods,
@@ -367,18 +368,18 @@ the performances of several imputation algorithms.
     imputed datasets. `r pkg("grf")` offers treatment effect
     estimation with incomplete confounders and covariates under modified
     unconfoundedness assumptions.
--   *Scoring* : Basic methods (mean, median, mode, \...) for imputing
+-   *Scoring*: Basic methods (mean, median, mode, \...) for imputing
     missing data in scoring datasets are proposed in
     `r pkg("scorecardModelUtils")`.
--   *Preference models* : Missing data in preference models are handled
+-   *Preference models*: Missing data in preference models are handled
     with a *Composite Link* approach that allows for MCAR and MNAR
     patterns to be taken into account in `r pkg("prefmod")`.
--   *Health economy* : `r pkg("missingHE")` implements models
+-   *Health economy*: `r pkg("missingHE")` implements models
     for health economic evaluations with missing outcome data.
--   *Administrative records / Surveys* : `r pkg("fastLink")`
+-   *Administrative records / Surveys*: `r pkg("fastLink")`
     provides a Fellegi-Sunter probabilistic record linkage that allows
     for missing data and the inclusion of auxiliary information.
--   *Regression and classification* : `r pkg("eigenmodel")`
+-   *Regression and classification*: `r pkg("eigenmodel")`
     handles missing values in regression models for symmetric relational
     data. `r pkg("randomForest")`, `r pkg("grf")`
     and `r pkg("StratifiedRF")` handle missing values in
@@ -393,13 +394,13 @@ the performances of several imputation algorithms.
     models with missing data in the predictors. `r pkg("lqr")`
     provides quantile regression estimates based on various
     distributions in the presence of missing values and censored data.
--   *Clustering* `r pkg("biclustermd")` handles missing data
+-   *Clustering*: `r pkg("biclustermd")` handles missing data
     in biclustering. `r pkg("RMixtComp")`,
     `r pkg("MGMM")` and `r pkg("mixture")` fit
     various mixture models in the presence of missing data.
 -   *Tests* for two-sample paired missing data are implemented in
     `r pkg("robustrank")`.
--   `r pkg("robustrao")` computes the Rao-Stirling diversity
+-   *Bibliometry*: `r pkg("robustrao")` computes the Rao-Stirling diversity
     index (a well-established bibliometric indicator to measure the
     interdisciplinarity of scientific publications) with data containing
     uncategorized references.
